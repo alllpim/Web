@@ -49,7 +49,7 @@ function sendJSON() { // с помощью jQuery обращаемся к эле
 
 	var result = getElementById('afterValid'); // создаём новый экземпляр запросаXHR
 	var xhr = new XMLHttpRequest(); // адрес, куда мы отправим нашу JSON-строку
-	var url = "http://alllpim.ru/json.php"; // открываем соединение
+	var url = "http://mihailmaximov.ru/projects/json/json.php"; // открываем соединение
 	xhr.open("POST", url, true); // устанавливаем заголовок — выбираем тип контента, который отправится на сервер, в нашем случае мы явно пишем, что это JSON
 	xhr.setRequestHeader("Content-Type", "application/json"); // когда придёт ответ на наше обращение к серверу, мы его обработаем здесь
 	xhr.onreadystatechange = function () { // если запрос принят и сервер ответил, что всё в порядке
