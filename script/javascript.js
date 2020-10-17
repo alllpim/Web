@@ -31,29 +31,11 @@ email.style.color = "black";
 if(text ==""){
 color = "#32CD32";
 text = "Signing up was successful!";
-//var obj = { login: login.value , password: password.value, email: email.value };
-//var myJSON = JSON.stringify(obj);
-//document.getElementById("afterValid").innerHTML = myJSON;
-//console.log(myJSON);
-//var formData = JSON.stringify($("#form").serializeArray());
+var obj = { login: login.value , password: password.value, email: email.value };
+var myJSON = JSON.stringify(obj);
+console.log(myJSON);
+
 }
 document.getElementById('afterValid').innerText = text;
 document.getElementById('afterValid').style.color = color;
 }
-
-
-function sendJSON() { // с помощью jQuery обращаемся к элементам на странице по их именам
-	var login = document.getElementById('login');
-	var password = document.getElementById('password');
-	var email = document.getElementById('email');
-
-	var result = getElementById('afterValid'); // создаём новый экземпляр запросаXHR
-	var xhr = new XMLHttpRequest(); // адрес, куда мы отправим нашу JSON-строку
-	var url = "http://mihailmaximov.ru/projects/json/json.php"; // открываем соединение
-	xhr.open("POST", url, true); // устанавливаем заголовок — выбираем тип контента, который отправится на сервер, в нашем случае мы явно пишем, что это JSON
-	xhr.setRequestHeader("Content-Type", "application/json"); // когда придёт ответ на наше обращение к серверу, мы его обработаем здесь
-	xhr.onreadystatechange = function () { // если запрос принят и сервер ответил, что всё в порядке
-		if (xhr.readyState === 4 && xhr.status === 200) { // выводим то, что ответил нам сервер — так мы убедимся, что данные он получил правильно
-			result.innerHTML = this.responseText; } }; // преобразуем наши данные JSON в строку
-			var data = JSON.stringify({ login: login.value , password: password.value, email: email.value }); // когда всё готово, отправляем JSON на сервер
-			xhr.send(data); }
