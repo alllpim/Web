@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="script/javascript.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+
+  <div class="board">
+    <form name="form" id="form" action="/file.json" method="post" autocomplete = "off">
+    <span class="signUp">SignUp</span>
+      <input id="login" class="login" name="login" placeholder="Login" required>
+      <input id="password" class="password" name="password" type="password" placeholder="Password" required>
+      <input id="email" class="email" name="email" placeholder="E-mail" required>
+    <button type="submit" onclick="validation(); return false; sendJSON()" class="button">Login</button>
+    <div id="afterValid" class="afterValid"></div>
+  </div>
+  </div>
+    </form>
+  </body>
+</html>
