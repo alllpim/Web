@@ -31,9 +31,9 @@ email.style.color = "black";
 if(text ==""){
 color = "#32CD32";
 text = "Signing up was successful!";
-var obj = { login: login.value , password: password.value, email: email.value };
-var myJSON = JSON.stringify(obj);
-console.log(myJSON);
+//var obj = { login: login.value , password: password.value, email: email.value };
+//var myJSON = JSON.stringify(obj);
+//console.log(myJSON);
 
 }
 document.getElementById('afterValid').innerText = text;
@@ -68,5 +68,6 @@ document.getElementById('afterValid').style.color = color;
     // преобразуем наши данные JSON в строку
     var data = JSON.stringify({ "login": login.value, "password": password.value, "email": email.value  });
     // когда всё готово, отправляем JSON на сервер
+		console.log(data);
     xhr.send(data);
   }
