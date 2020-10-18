@@ -62,7 +62,7 @@ document.getElementById('afterValid').style.color = color;
       // если запрос принят и сервер ответил, что всё в порядке
       if (xhr.readyState === 4 && xhr.status === 200) {
         // выводим то, что ответил нам сервер — так мы убедимся, что данные он получил правильно
-        result.innerHTML = this.responseText;
+        result.innerText = "Good";
       }
     };
     // преобразуем наши данные JSON в строку
